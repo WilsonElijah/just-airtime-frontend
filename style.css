@@ -360,3 +360,57 @@ body.tracker-page {
     border-color: var(--alert-red);
     box-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
 }
+
+/* =========================================
+   📱 MOBILE RESPONSIVENESS FIXES
+========================================= */
+@media (max-width: 768px) {
+
+    /* 1. Stack the Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* 2. Shrink Containers & Text */
+    body.tracker-page {
+        padding-top: 10rem;
+        /* Give the stacked navbar more room */
+    }
+
+    .glass-container,
+    .workout-form {
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    .glass-container h2,
+    .workout-form h2 {
+        font-size: 1.5rem;
+    }
+
+    /* 3. Re-flow the Flight Cards */
+    .flight-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+    }
+
+    .flight-card-right {
+        width: 100%;
+        justify-content: space-between;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 1rem;
+    }
+
+    .flight-card-height {
+        font-size: 2rem;
+    }
+}
